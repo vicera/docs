@@ -5,12 +5,12 @@ Once mature enough to be published, the documentation will be published [here](h
 
 ### TODO List
 
- - [ ] Main usage
- - [ ] Memory
- - [ ] CPU
+ - [X] Main usage
+ - [X] Memory
+ - [X] CPU
  - [ ] GPU
  - [ ] SPU (?)
  - [ ] Controller
- - [ ] Configuration
+ - [X] Configuration
  - [ ] Tutorial (?)
  - [ ] ASM Cheatsheet (?)
