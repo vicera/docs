@@ -296,5 +296,299 @@ Substracts (HL) to A.
 Does a bitwise AND operation with A and the value of r.
 
     Inst.   Args        Opcodes
+    and     A           0x6d
+    and     B           0x6e
+    and     C           0x6f
+    and     D           0x70
+    and     E           0x71
+    and     H           0x72
+    and     L           0x73
+
+### and n
+
+Does a bitwise AND operation with A and n.
+
+    Inst.   Args        Opcodes
+    and     n           0x74
+
+### and (HL)
+
+Does a bitwise AND operation with A and (HL).
+
+    Inst.   Args        Opcodes
+    and     (HL)        0x75
+
+### or r
+
+Does a bitwise OR operation with A and the value of r.
+
+    Inst.   Args        Opcodes
+    or      A           0x76
+    or      B           0x77
+    or      C           0x78
+    or      D           0x79
+    or      E           0x7a
+    or      H           0x7b
+    or      L           0x7c
+
+### or n
+
+Does a bitwise OR operation with A and n.
+
+    Inst.   Args        Opcodes
+    or      n           0x7d
+
+### or (HL)
+
+Does a bitwise OR operation with A and (HL).
+
+    Inst.   Args        Opcodes
+    or      (HL)        0x7e
+
+### xor r
+
+Does a bitwise XOR operation with A and the value of r.
+
+    Inst.   Args        Opcodes
+    xor     A           0x7f
+    xor     B           0x80
+    xor     C           0x81
+    xor     D           0x82
+    xor     E           0x83
+    xor     H           0x84
+    xor     L           0x85
+
+### xor n
+
+Does a bitwise XOR operation with A and n.
+
+    Inst.   Args        Opcodes
+    xor     n           0x86
+
+### xor (HL)
+
+Does a bitwise XOR operation with A and (HL).
+
+    Inst.   Args        Opcodes
+    xor     (HL)        0x87
+
+## Increment and Shift
+
+These arithmetic instructions are different because the result will not affect
+the A register but the specified register itself
+
+### inc r
+
+Increments r.
+
+    Inst.   Args        Opcodes
+    inc     A           0x88
+    inc     B           0x89
+    inc     C           0x8a
+    inc     D           0x8b
+    inc     E           0x8c
+    inc     H           0x8d
+    inc     L           0x8e
+
+### inc rr
+
+Increments rr.
+
+    Inst.   Args        Opcodes
+    inc     HL          0x8f
+    inc     BC          0x90
+    inc     DE          0x91
+
+### dec r
+
+Decrements r.
+
+    Inst.   Args        Opcodes
+    dec     A           0x92
+    dec     B           0x93
+    dec     C           0x94
+    dec     D           0x95
+    dec     E           0x96
+    dec     H           0x97
+    dec     L           0x98
+
+### dec rr
+
+Decrements rr.
+
+    Inst.   Args        Opcodes
+    dec     HL          0x99
+    dec     BC          0x9a
+    dec     DE          0x9b
+
+### sl r
+
+Bitwise shift r to left.
+
+    Inst.   Args        Opcodes
+    sl      A           0x9c
+    sl      B           0x9d
+    sl      C           0x9e
+    sl      D           0x9f
+    sl      E           0xa0
+    sl      H           0xa1
+    sl      L           0xa2
+
+### sr r
+
+Bitwise shift r to right.
+
+    Inst.   Args        Opcodes
+    sr      A           0xa3
+    sr      B           0xa4
+    sr      C           0xa5
+    sr      D           0xa6
+    sr      E           0xa7
+    sr      H           0xa8
+    sr      L           0xa9
+
+## Conditions and jumps
+
+The following instructions will be about executing conditions and jumping
+through the code.
+
+Conditions works like this :
+
+ - Compare A with x
+ - If A == x set Zero Flag to 1
+ - Else set Zero Flag to 0
+ - If A < x then set Carry Flag to 1
+ - Else set Carry Flag to 0
+
+### cp r
+
+Compare A with r.
+
+    Inst.   Args        Opcodes
+    cp      A           0xaa
+    cp      B           0xab
+    cp      C           0xac
+    cp      D           0xad
+    cp      E           0xae
+    cp      H           0xaf
+    cp      L           0xb0
+
+### cp n
+
+Compare A with n.
+
+    Inst.   Args        Opcodes
+    cp      n           0xb1
+
+### cp (HL)
+
+Compare A with (HL).
+
+    Inst.   Args        Opcodes
+    cp      (HL)        0xb2
+
+### jp nn
+
+Jumps at nn.
+
+    Inst.   Args        Opcodes
+    jp      nn          0xb3
+
+### jp HL
+
+Jumps at HL.
+
+    Inst.   Args        Opcodes
+    jp      (HL)        0xb4
+
+### jc nn
+
+Jumps at nn if Carry Flag is on.
+
+    Inst.   Args        Opcodes
+    jc      nn          0xb5
+
+### jc (HL)
+
+Jumps at (HL) if Carry Flag is on.
+
+    Inst.   Args        Opcodes
+    jc      (HL)        0xb6
+
+### jz nn
+
+Jumps at nn if Zero Flag is on.
+
+    Inst.   Args        Opcodes
+    jz      nn          0xb7
+
+### jz (HL)
+
+Jumps at (HL) if Zero Flag is on
+
+    Inst.   Args        Opcodes
+    jz      (HL)        0xb8
+
+### jn nn
+
+Jumps at nn if Zero Flag is off.
+
+    Inst.   Args        Opcodes
+    jn      nn          0xb9
+
+### jn (HL)
+
+Jumps at (HL) if Zero Flag is off.
+
+    Inst.   Args        Opcodes
+    jn      (HL)        0xba
     
-        Work in progress.
+### call nn
+
+Push the Program Counter into the stack and jumps at nn.
+
+    Inst.   Args        Opcodes
+    call    nn          0xbb
+
+### call (HL)
+
+Push the Program Counter into the stack and jumps at (HL).
+
+    Inst.   Args        Opcodes
+    call    (HL)        0xbc
+
+### ret
+
+Pops the stack into the Program Counter.
+
+    Inst.   Args        Opcodes
+    ret                 0xbd
+    
+## Dumping instructions
+
+These are two instructions designed to debug the program.
+
+### dumpr
+
+Dumps all the registers.
+
+    Inst.   Args        Opcodes
+    dumpr               0xbe
+
+### dumpm nn
+
+Dumps the memory from (nn) to (nn+0xf)
+
+    Inst.   Args        Opcodes
+    dumpm   nn          0xbf
+
+## Misc.
+
+### slp
+
+Sleeps for 30000 microseconds to avoid 100% CPU usage on the host machine.
+
+    Inst.   Args        Opcodes
+    slp                 0xc0
+    
+[Go back to the CPU manual](cpu.html)
