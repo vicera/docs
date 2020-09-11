@@ -8,9 +8,9 @@ Once mature enough to be published, the documentation will be published [here](h
  - [X] Main usage
  - [X] Memory
  - [X] CPU
- - [ ] GPU
+ - [X] GPU
  - [ ] SPU (?)
- - [ ] Controller
+ - [X] Controller
  - [X] Configuration
  - [ ] Tutorial (?)
  - [ ] ASM Cheatsheet (?)
