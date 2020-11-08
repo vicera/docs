@@ -1,3 +1,5 @@
+# VICERA Documentation
+
 ## CPU programming reference
 
 The CPU architecture is pretty simple and is more or less inspired by the
@@ -39,6 +41,11 @@ The flags are the first two bits of an 8-bit value stored in it.
                 | |
                 | Zero flag
                 Carry flag
+
+The flags are updated when a condition is tested or if an arithmetic operation
+has been done. For example, if the result of the operation is 0, the zero flag
+will be set, else it is reset. If the result of the operation does an integer
+overflow, the carry flag will be set.
 
 ### Registers
 
@@ -86,3 +93,13 @@ hope you will figure it out or you have understood.
 ### Opcode reference
 
 [Refer to this page](opcode.html)
+
+## Developer's note
+
+You can use `cpu.c`, `logging.c`, `logging.h` and `cpu.h` individually since it
+doesn't depend on anything in the VICERA. Then, with these you can implement
+your own machine based on the CPU!  
+[Here is a good example](https://git.h3liu.ml/vcollection/vic8p-brainfuck)
+
+Modifying the CPU should also not be difficult since it is just a long
+switch-case statement and a bunch of small functions.
