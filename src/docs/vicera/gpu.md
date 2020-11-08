@@ -1,4 +1,5 @@
- - [The socket extension](vicera/socket.html)
+# VICERA Documentation
+
 ## GPU Reference
 
 The GPU is a crucial feature, it generates the graphics to display on the

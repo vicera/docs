@@ -2,8 +2,6 @@
 
 ## Front-end
 
-_**DEVELOPER NOTE:** This chapter concerns `main.c` and `config.c`._
-
 The front-end is an essential part of the VICERA because it puts all the pieces
 together to make the VICERA work. The current front-end only works for POSIX
 Systems (Linux, BSD, Mac OS X, etc..) due to the use of POSIX libraries. I will

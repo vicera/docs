@@ -33,4 +33,5 @@ a brainfuck interpreter.
 
 ## [Documentation](/vicera/docs)
 
-The documentation is not there yet. But be patient! It's Coming Soon:tm:
+You might need it if you are programming it unless you like reading C and C++
+code.

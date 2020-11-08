@@ -20,6 +20,6 @@ read some C or C++ lines of code).
 ## VICasm Documentation
 
  - [Introduction](vicasm/intro.html)
- - [General syntax](vicasm/syntax.html)
+ - [General syntax](vicasm/general.html)
  - [Pseudo-instructions](vicasm/instr.html)
 
